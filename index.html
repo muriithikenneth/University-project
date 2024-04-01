@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone project</title>
+    <style>
+        .header {
+            background-position: center;
+            background-color: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(backgroundcollege.avif);
+            background-size: cover;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            z-index: index 1;
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        .nav links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav links ul li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: #fff;
+            font: size 16px;
+        }
+
+        .text-box {
+            position: absolute;
+            color: #fff;
+            width: 90%;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .text-box h1 {
+            font-size: 62px;
+            margin: bottom 20px;
+            font-weight: bold;
+        }
+
+        .text-box p {
+            font-size: 20px;
+        }
+
+        .yours-btn {
+            display: inline-block;
+            background: transparent;
+            font-size: 13px;
+            position: relative;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        .yours-btn:hover {
+            border: 1px solid red;
+            background-color: red;
+            transition: background-color 1s, border-color 1s;
+        }
+
+        @media(max-width:700px) {
+            .text-box h1 {
+                font-size: 2opx;
+
+
+            }
+        }
+
+        /* ----course---- */
+
+        .course {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .course h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .course p {
+            color: rgba(4, 9, 30, 0.7);
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course-col {
+            flex-basis: 30%;
+            box-sizing: border-box;
+            padding: 20px 12px;
+            margin-bottom: 5%;
+            background: #fff3f3;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 20px opx rgb(0, 0, 0, 0.2);
+
+        }
+
+        /* ---- campus ---- */
+
+        .campus {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            padding-top: 50px;
+
+        }
+
+        .campus-col {
+            flex-basis: 32%;
+            margin-bottom: 30px;
+            position: relative;
+            border: radius 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10 0x rgb(0, 0, 0, 0.1);
+        }
+
+        .campus-col img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+        }
+
+        .layer {
+            background-color: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transition: 0.s;
+        }
+
+        .layer:hover {
+            background-color: rgb(226, 0, 0, 0.7);
+        }
+
+        .layer h3 {
+            width: 100%;
+            color: #fff;
+            font-size: 20px;
+            transform: translateX(-50%);
+            left: 50%;
+            font-weight: 500;
+            position: absolute;
+            transition: o.5s;
+            capacity: 0;
+        }
+
+        /* ---- facilities ---- */
+
+        .facilities {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+            justify-content: space-between;
+
+        }
+
+        .facilities-col {
+            flex-basis: 30%;
+            border: radius 10px;
+            text-align: left;
+            margin-bottom: 5%;
+            box-sizing: border-box;
+
+        }
+
+        .facilities-col img {
+            width: 100%;
+            border-radius: 10px;
+
+        }
+
+        .facilities-col p {
+            padding: 0;
+
+        }
+
+        .facilities-col h3 {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* ---- call to Action */
+
+        .cta {
+            margin: 100;
+            width: 80%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Mentor.jpg);
+            background-position: center;
+            background-size: cover;
+            border: radius 10px;
+            padding: 100px;
+        }
+
+        .cta h1 {
+            color: #fff;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+
+        .icons {
+            margin-top: 20px;
+        }
+
+        .icons i {
+            font-size: 24px;
+            margin-top: 0 10px;
+            color: #000;
+        }
+
+        /* ---- footer ---- */
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 24px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .icons.fa {
+            color: f44336;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+
+        .fa-heart-o {
+            color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+        <a href="index.html"><img src="backgroundcollege.avif" alt="School"></a>
+        <div class="text-box">
+            <h1>Strathmore university</h1>
+            <p>is a modern university with a global outlook,<br> a vision of becoming a leading outcome-driven,
+                entrepreneurial research university.</p>
+            <a href="" class="yours-btn">Visit us to know more</a>
+        </div>
+    </section>
+
+    <!-- ----Course---- -->.
+    <section class="course">
+        <h1>courses we offer</h1>
+        <p>Electrical engineering,cosmetology,neurosurgeon</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Diploma</h3>
+                <p>Dive into the fundamentals with our diploma courses.</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Earn your degree with our comprehensive degree programs.</p>
+            </div>
+            <div class="course-col">
+                <h3>Graduation</h3>
+                <p>Prepare for graduation with our specialized programs.</p>
+            </div>
+    </section>
+
+    <section class="campus">
+        <h1>Our international campus</h1>
+        <p>Explore our international campuses and experience the richness of global learning.</p>
+
+        <div class="row">,
+            <div class="campus-col">
+                <img src="london university.avif" alt="London">
+                <div class="layer">
+                    <h3>London</h3>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="campus-col">
+                        <img src="india universities.jpg" alt="Scotland campus">
+                        <div class="layer">
+                            <h3>india</h3>
+                        </div>
+                    </div>
+
+                    <div class="campus-col">
+                        <img src="Newyork.jpg" alt="New york campus">
+                        <div class="layer">
+                            <h3>New york</h3>
+                        </div>
+                    </div>
+
+
+
+    </section>
+
+    <!-- ---- facilities ---- -->
+
+    <section class="facilities">
+        <h1>Our facilities</h1>
+        <p>Our campus boasts modern facilities designed to foster a conducive learning environment and cater to the
+            diverse needs of our students. </p>
+
+        <div class="row">
+            <div class="facilities-col" id="library">
+                <img src="library.avif" alt="library">
+                <h3>Strathmore library</h3>
+                <p>Our library is a treasure trove of knowledge, offering a vast collection of resources to support your
+                    academic journey. </p>
+            </div>
+            <div class="row"></div>
+            <div class="facilities-col" id="food">
+                <img src="food.jpg" alt="food">
+                <h3>Tasty and healthy food</h3>
+                <p>At Strathmore, we understand the importance of nourishing both the mind and body.</p>
+            </div>
+            <div class="row"></div>
+            <div class="facilities-col" id="football">
+                <img src="football.jpg" alt="playground">
+                <h3>Play ground</h3>
+                <p>Escape the rigors of academic life and rejuvenate your spirit in our welcoming outdoor
+                    environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---- call to Action ---- -->
+
+    <section class="cta">
+        <h1>Enroll for our various online courses<br>anywhere from the world</h1>
+        <a href="" class="hero-btn">Contact us</a>
+    </section>
+
+
+    <!-- ---- footer ---- -->
+
+    <section class="footer">
+        <h4>About us</h4>
+        <p>In our journey at Strathmore University,we embody excellence,<br> innovation, and a commitment to shaping the
+            future.</p>
+        <div class="icons">
+
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-tiktok"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with love,by Eston mwangi</p>
+    </section>
+
+
+
+</body>
+
+</html

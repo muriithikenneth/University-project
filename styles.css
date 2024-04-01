@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.header {
+    background-position: center;
+    background-color: linear gradient(rgba(4, 9, 30, 0, 7), rgba(4.9.30, 0, 7)), url(library.avif);
+    background-size: cover;
+    width: 100%;
+    min-height: 100Vh;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav links {
+    text-align: right;
+    flex: 1;
+}
+
+.nav links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+nav links ul li a {
+text-decoration: none;
+color: #fff;
+font-size: 13px;
+}
+
